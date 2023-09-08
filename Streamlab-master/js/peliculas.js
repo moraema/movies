@@ -35,8 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <span>${pelicula.duracion}</span>
                                     <i class="fas fa-circle"></i>
                                     <a>${pelicula.genero}</a>
-                                    <a class="ver-detalles" href="/peliculasuno.html" id=${pelicula.id}>detalles</a>
+                                    
                                 </div>
+                                <button class="primary" onclick="window.seguridad.showModal();">Ver Más</button>
                             </div>
                         </div>
                     </div>

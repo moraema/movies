@@ -35,8 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <span>${tendencias.duracion}</span>
                                     <i class="fas fa-circle"></i>
                                     <a>${tendencias.genero}</a>
-                                    <a class="ver-detalles" href="/peliculasuno.html" id=${tendencias.id}>detalles</a>
+                                   
                                 </div>
+                                <button class="primary" onclick="window.loki.showModal();">Ver Más</button>
                             </div>
                         </div>
                     </div>

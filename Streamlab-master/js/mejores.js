@@ -35,8 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <span>${mejor.duracion}</span>
                                     <i class="fas fa-circle"></i>
                                     <a>${mejor.genero}</a>
-                                    <a class="ver-detalles" href="/peliculasuno.html" id=${mejor.id}>detalles</a>
+                                    
                                 </div>
+                                <button class="primary" onclick="window.loki.showModal();">Ver Más</button>
                             </div>
                         </div>
                     </div>

@@ -35,8 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <span>${serie.duracion}</span>
                                     <i class="fas fa-circle"></i>
                                     <a>${serie.genero}</a>
-                                    <a class="ver-detalles" href="#" data-serie-id="${serie.id}">detalles</a>
+                            
                                 </div>
+                                <button class="primary" onclick="window.loki.showModal();">Ver Más</button>
                             </div>
                         </div>
                     </div>
@@ -56,11 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             });
 
-            // Función para mostrar el cuadro de diálogo
-            function mostrarCuadroDialogo(serieId) {
-                window.alert('Hola');
-                // Aquí puedes personalizar el cuadro de diálogo como desees.
-            }
+
 
         })
         .catch(error => {
