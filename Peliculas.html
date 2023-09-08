@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>UPelis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Streamlab-master/css/peliculas.css">
+
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Owl Carousel css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- Owl Carousel css-->
+
+
+    <!-- jquery css-->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <!-- jquery css-->
+    <script src="/Streamlab-master/js/script.js"></script>
+
+</head>
+
+<body>
+    <section class="home">
+        <div class="headerbg ">
+            <header>
+                <div class="container ">
+                    <div class="navbar flex1">
+                        <div class="logo">
+                            <img src="/Streamlab-master/image/UPelis.png" alt="">
+                        </div>
+
+                        <nav>
+                            <ul id="menuitem">
+                                <li><a href="/Streamlab-master/index.html">Inicio</a></li>
+                                <li><a href="/series.html">Series</a></li>
+                                <li><a href="/Peliculas.html">Peliculas</a></li>
+                                <li><a href="/Popular.html">Popular</a></li>
+                                <li><a href="/Recientes.html">Más Recientes</a></li>
+                            </ul>
+                        </nav>
+                        <span class="fa fa-bars" onclick="menutoggle()"></span>
+
+                        <div class="subscribe flex">
+                            <i class="fas fa-search"></i>
+                            <i id="palybtn" class="fas fa-user"></i>
+                            <button>SUBSCRIBE</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="home_content mtop">
+                <div class="container">
+                    <div class="left">
+                        <h1>Your Name</h1>
+
+                        <div class="time flex">
+                            <label>R</label>
+                            <i class="fas fa-circle"></i>
+                            <span>1hrs 46mins</span>
+                            <i class="fas fa-circle"></i>
+                            <p>2017</p>
+                            <i class="fas fa-circle"></i>
+                            <button>Romance</button>
+                        </div>
+
+                        <p>"Your Name" es una película de anime que sigue la historia de Taki y Mitsuha, dos adolescentes que, de manera inexplicable, intercambian sus cuerpos. A través de esta extraña conexión, desarrollan una relación única mientras intentan
+                            comprender y adaptarse a sus vidas alternas. A medida que profundizan en este misterio, se embarcan en un viaje para encontrarse en persona y resolver el enigma detrás de este fenómeno, mientras exploran temas de amor, destino
+                            y la conexión entre las personas.
+                        </p>
+                        <div class="button flex">
+                            <button class="btn">VER AHORA</button>
+                            <i id="palybtn" class="fas fa-play"></i>
+                            <p>VER TRAILER</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular mtop">
+        <div class="container">
+            <div class="heading flex1">
+                <h2>Más Popular</h2>
+                <button>Más Series</button>
+            </div>
+
+            <div class="owl-carousel owl-theme" id="peliculas-carousel">
+                <!-- Aquí se agregarán las películas dinámicamente -->
+            </div>
+        </div>
+
+        <script src="/Streamlab-master/js/peliculas.js"></script>
+    </section>
+
+
+
+
+
+
+</body>
+
+</html>

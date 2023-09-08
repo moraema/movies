@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>UPelis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+    <script src="/Streamlab-master/js/script.js"></script>
+
+</head>
+
+<body>
+    <section class="home">
+        <div class="headerbg ">
+            <header>
+                <div class="container ">
+                    <div class="navbar flex1">
+                        <div class="logo">
+                            <img src="/Streamlab-master/image/UPelis.png" alt="">
+                        </div>
+
+                        <nav>
+                            <ul id="menuitem">
+                                <li><a href="index.html">Inicio</a></li>
+                                <li><a href="/series.html">Series</a></li>
+                                <li><a href="/Peliculas.html">Peliculas</a></li>
+                                <li><a href="/Popular.html">Popular</a></li>
+                                <li><a href="/Recientes.html">Más Recientes</a></li>
+                            </ul>
+                        </nav>
+                        <span class="fa fa-bars" onclick="menutoggle()"></span>
+
+                        <div class="subscribe flex">
+                            <i class="fas fa-search"></i>
+                            <i id="palybtn" class="fas fa-user"></i>
+                            <button>SUBSCRIBE</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="home_content mtop">
+                <div class="container">
+                    <div class="left">
+                        <h1>Crepúsculo: Eclipse</h1>
+
+                        <div class="time flex">
+                            <label>R</label>
+                            <i class="fas fa-circle"></i>
+                            <span>2hrs 4mins</span>
+                            <i class="fas fa-circle"></i>
+                            <p>2010</p>
+                            <i class="fas fa-circle"></i>
+                            <button>Drama</button>
+                        </div>
+
+                        <p>Se sumerge más profundamente en el triángulo amoroso entre Bella Swan, Edward Cullen y Jacob Black. Mientras Bella lucha con su elección entre el amor eterno con Edward y la amistad con Jacob, una misteriosa serie de asesinatos
+                            vampíricos amenaza a la comunidad de Forks. Los Cullen y los licántropos Quileute deben unirse para enfrentar esta amenaza común, mientras Bella busca respuestas sobre su conexión con un vampiro vengativo.
+                        </p>
+                        <div class="button flex">
+                            <button class="btn">VER AHORA</button>
+                            <i id="palybtn" class="fas fa-play"></i>
+                            <p>VER TRAILER</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="popular mtop">
+        <div class="container">
+            <div class="heading flex1">
+                <h2>Tendencias</h2>
+                <button>Más Series</button>
+            </div>
+
+            <div class="owl-carousel owl-theme" id="tendencias-carousel">
+                <!-- Los elementos del carrusel se generarán aquí dinámicamente -->
+
+            </div>
+        </div>
+
+        <script src="/Streamlab-master/js/tendencias.js"></script>
+
+    </section>
+
+
+
+
+
+    <section class="popular mtop">
+        <div class="container">
+            <div class="heading flex1">
+                <h2>Más Popular</h2>
+                <button>Más Series</button>
+            </div>
+
+            <div class="owl-carousel owl-theme" id="mejores-carousel">
+                <!-- Aquí se agregarán las películas dinámicamente -->
+            </div>
+        </div>
+
+        <script src="/Streamlab-master/js/mejores.js"></script>
+    </section>
+
+
+    <section class="popular mtop">
+        <div class="container">
+            <div class="heading flex1">
+                <h2>Top Clasificados</h2>
+                <button>Más</button>
+            </div>
+
+            <div class="owl-carousel owl-theme" id="populares-carousel">
+                <!-- Los elementos del carrusel se generarán aquí dinámicamente -->
+
+            </div>
+        </div>
+
+        <script src="/Streamlab-master/js/popularidad.js"></script>
+
+    </section>
+
+
+
+</body>
+
+</html>
