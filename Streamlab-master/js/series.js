@@ -30,34 +30,73 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <i id="playbtn" class="fas fa-play"></i>
                             </div>
                             <div class="text">
-                                <h3>${serie.nombre} </h3>
+                                <h3>${serie.nombre}</h3>
                                 <div class="time flex">
                                     <span>${serie.duracion}</span>
                                     <i class="fas fa-circle"></i>
                                     <a>${serie.genero}</a>
-                            
                                 </div>
-                                <button class="primary" onclick="window.loki.showModal();">Ver Más</button>
+                                <button class="primary" data-nombre="${serie.nombre}" data-descripcion="${serie.descripcion}" data-duracion="${serie.duracion}" data-genero="${serie.genero}" data-imagen="${serie.imagen}">Ver Más</button>
                             </div>
                         </div>
                     </div>
                 `;
             });
 
-            // Inserta el HTML generado dinámicamente en el marcador
+            // Inserta el HTML generado dinámicamente en el carrusel
             seriesCarousel.insertAdjacentHTML('beforeend', dynamicHTML);
 
-            // Agrega un evento click a los enlaces "detalles"
-            const detallesLinks = document.querySelectorAll('.ver-detalles');
-            detallesLinks.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    const serieId = this.getAttribute('data-serie-id');
-                    mostrarCuadroDialogo(serieId);
+            // Agrega un evento click a todos los botones "Ver Más"
+            const verMasBotones = document.querySelectorAll('.text button.primary');
+            verMasBotones.forEach(boton => {
+                boton.addEventListener('click', function() {
+                    const nombre = this.getAttribute('data-nombre');
+                    const descripcion = this.getAttribute('data-descripcion');
+                    const duracion = this.getAttribute('data-duracion');
+                    const genero = this.getAttribute('data-genero');
+                    const imagen = this.getAttribute('data-imagen');
+                    showSerieDetails(nombre, descripcion, duracion, genero, imagen);
                 });
             });
 
+            // Función para mostrar el modal con los detalles de la serie
+            function showSerieDetails(nombre, descripcion, duracion, genero, imagen) {
+                // Crea el modal dinámicamente
+                const modalHTML = `
+                <dialog class="modal-dialog">
+                <h2>${nombre}</h2>
+                <img src="${imagen}" alt="Imagen de la serie">
+                <div class="details">
+                <h3>${duracion}</h3>
+                <h3>${genero}</h3>
+                </div>
+                <p>${descripcion}</p>
+                <button class="ver-button">Ver</button>
+                <button class="descargar-button">Descargar</button>
+                <button aria-label="close" class="x">❌</button>
+            </dialog>
+            
+                `;
 
+                // Agrega el modal al final del cuerpo del documento
+                document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+                // Obtén una referencia al botón de cierre del modal recién creado
+                const closeButton = document.querySelector('.modal-dialog button.x');
+
+                // Muestra el modal
+                const modal = document.querySelector('.modal-dialog');
+                modal.showModal();
+
+                // Agrega un evento click al botón de cierre para cerrar el modal
+                closeButton.addEventListener('click', function() {
+                    // Cierra el modal
+                    modal.close();
+
+                    // Elimina el modal del DOM después de cerrarlo
+                    modal.remove();
+                });
+            }
 
         })
         .catch(error => {

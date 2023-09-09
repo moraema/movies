@@ -10,9 +10,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-
-/*---------global------*/
-
 .container {
     max-width: 95%;
     margin: auto;
@@ -45,12 +42,6 @@ i {
     cursor: pointer;
     transition: 0.5s;
 }
-
-
-/*---------global------*/
-
-
-/*---------header------*/
 
 .home {
     color: white;
@@ -192,9 +183,6 @@ header.sticky .subscribe {
     }
 }
 
-
-/*---------home_content------*/
-
 .left,
 .right {
     width: 50%;
@@ -264,12 +252,6 @@ h1 {
     font-size: 18px;
 }
 
-
-/*---------header------*/
-
-
-/*---------popular------*/
-
 .heading h2 {
     font-size: 25px;
     font-weight: 400;
@@ -287,9 +269,6 @@ h1 {
 .popular {
     color: white;
 }
-
-
-/*---------image_hover------*/
 
 .popular .box {
     position: relative;
@@ -340,9 +319,6 @@ h1 {
     line-height: 60px;
 }
 
-
-/*----icon------*/
-
 .popular .icon {
     position: absolute;
     bottom: 0;
@@ -353,9 +329,6 @@ h1 {
     font-size: 20px;
     margin: 10px;
 }
-
-
-/*----text------*/
 
 .popular .text {
     padding: 20px;
@@ -396,39 +369,23 @@ h1 {
 .time a {
     display: block;
     margin-bottom: 5px;
-    /* Espacio entre los enlaces "Acción" y "Ver detalles" */
 }
-
-.ver-detalles {
-    display: block;
-    margin-top: 35px;
-    color: #007bff;
-    text-decoration: none;
-}
-
-
-/* Contenedor principal del carrusel */
 
 #series-carousel {
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     gap: 10px;
-    /* Reducir el espacio entre elementos */
     padding: 10px;
-    /* Reducir el espaciado interior para elementos */
     width: 100%;
 }
 
 .item {
     flex: 0 0 calc(25% - 10px);
-    /* Reducir el tamaño de los elementos */
     scroll-snap-align: start;
     border-radius: 8px;
-    /* Reducir el radio de los bordes */
     overflow: hidden;
     margin-right: 10px;
-    /* Espacio entre elementos */
 }
 
 .imgBox img {
@@ -438,133 +395,24 @@ h1 {
 
 .content .fa-play {
     font-size: 20px;
-    /* Reducir el tamaño del ícono de reproducción */
     padding: 8px;
-    /* Reducir el espaciado interior del botón */
 }
 
 .text h3 {
     font-size: 15px;
-    /* Aumentar el tamaño del título */
     margin: 10px 0;
-    /* Espaciado en la parte superior e inferior del título */
 }
-
-
-/* Estilo para los elementos de tiempo y género */
 
 .text .time {
     font-size: 13px;
-    /* Aumentar el tamaño del texto de tiempo y género */
-}
-
-
-/* Estilo para el enlace "detalles" */
-
-.ver-detalles {
-    font-size: 16px;
-    /* Aumentar el tamaño del enlace "detalles" */
-    margin-left: 10px;
-    /* Espacio a la izquierda del enlace */
-}
-
-
-/* Estilo para el modal */
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-}
-
-
-/* Estilo para el contenido del modal */
-
-.modal-content {
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    border-radius: 5px;
-    width: 70%;
-    box-shadow: 0px 0px 10px 0px #000;
-    position: relative;
-}
-
-
-/* Estilo para el botón de cierre (X) */
-
-.close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    cursor: pointer;
-}
-
-
-/**/
-
-:root {
-    --vs-primary: 29 92 255;
-}
-
-dialog {
-    padding: 1rem 3rem;
-    background: rgba(218, 212, 212, 0.877);
-    max-width: 400px;
-    padding-top: 2rem;
-    border-radius: 20px;
-    border: 0;
-    box-shadow: 0 5px 30px 0 rgba(235, 68, 68, 0.993);
-    animation: fadeIn 1s ease both;
-    &::backdrop {
-        animation: fadeIn 1s ease both;
-        background: rgba(247, 237, 237, 0.4);
-        z-index: 2;
-        backdrop-filter: blur(5px);
-    }
-    .x {
-        filter: grayscale(1);
-        border: none;
-        background: none;
-        position: absolute;
-        top: 15px;
-        right: 10px;
-        transition: ease filter, transform 0.3s;
-        cursor: pointer;
-        transform-origin: center;
-        &:hover {
-            filter: grayscale(0);
-            transform: scale(1.1);
-        }
-    }
-    h2 {
-        font-weight: 600;
-        font-size: 2rem;
-        padding-bottom: 1rem;
-    }
-    p {
-        font-size: 1rem;
-        line-height: 1.3rem;
-        padding: 0.5rem 0;
-        a {
-            &:visited {
-                color: rgb(var(--vs-primary));
-            }
-        }
-    }
 }
 
 button.primary {
     display: inline-block;
     font-size: 0.8rem;
     color: #ffffff !important;
-    background: rgb(var(--vs-primary) / 100%);
+    background: #2196F3;
+    /* Cambiado a azul */
     padding: 13px 25px;
     border-radius: 17px;
     transition: background-color 0.1s ease;
@@ -572,18 +420,88 @@ button.primary {
     transition: all 0.25s ease;
     border: 0;
     cursor: pointer;
-    box-shadow: 0 10px 20px -10px rgb(var(--vs-primary) / 50%);
-    &:hover {
-        box-shadow: 0 20px 20px -10px rgb(var(--vs-primary) / 50%);
-        transform: translateY(-5px);
-    }
+    box-shadow: 0 10px 20px -10px rgba(33, 150, 243, 0.5);
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+button.primary:hover {
+    box-shadow: 0 20px 20px -10px rgba(33, 150, 243, 0.5);
+    transform: translateY(-5px);
+}
+
+.modal-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #9fa2a9;
+    width: 1400px;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-dialog img {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    height: auto;
+}
+
+.modal-dialog p {
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.modal-dialog .x {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #104b93;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    padding: 8px;
+}
+
+.modal-dialog .descargar-button {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #ffffff;
+    background: #2196F3;
+    padding: 13px 25px;
+    border-radius: 17px;
+    transition: background-color 0.1s ease, transform 0.25s ease;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 10px 20px -10px rgba(33, 150, 243, 0.5);
+}
+
+.modal-dialog .descargar-button:hover {
+    background: #0b7dda;
+    transform: translateY(-5px);
+}
+
+.modal-dialog .ver-button {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #ffffff;
+    background: #2196F3;
+    padding: 13px 25px;
+    border-radius: 17px;
+    transition: background-color 0.1s ease, transform 0.25s ease;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 10px 20px -10px rgba(33, 150, 243, 0.5);
+}
+
+.modal-dialog .ver-button:hover {
+    background: #0b7dda;
+    transform: translateY(-5px);
 }
