@@ -13,10 +13,10 @@ app.use((req, res, next) => {
 app.use(cors());
 // Configuración de la conexión a la base de datos MySQL
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '2004',
-    database: 'movies'
+    host: 'movies.ctafc3zavajx.us-east-1.rds.amazonaws.com',
+    user: 'admin',
+    password: '12345678',
+    database: 'peliculas'
 });
 
 // Conexión a la base de datos
