@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch('http://localhost:8080/tendencias')
         .then(response => response.json())
         .then(tendencias => {
-            // Procesa los datos de las series aquí
+
             console.log('Datos de series extraídos correctamente:', tendencias);
 
             // Obtén una referencia al contenedor del carrusel
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Variable para almacenar el HTML generado dinámicamente
             let dynamicHTML = '';
 
-            // Recorre el arreglo 'series' y genera elementos para cada serie
+
             tendencias.forEach(tendencias => {
                 dynamicHTML += `
                     <div class="item">
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <a>${tendencias.genero}</a>
                                    
                                 </div>
-                                <button class="primary" onclick="window.loki.showModal();">Ver Más</button>
+                             
                             </div>
                         </div>
                     </div>
@@ -46,6 +46,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Inserta el HTML generado dinámicamente en el marcador
             tendenciasCarousel.insertAdjacentHTML('beforeend', dynamicHTML);
+
+
 
 
         })
