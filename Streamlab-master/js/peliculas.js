@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <a>${pelicula.genero}</a>
                                     
                                 </div>
-                                <button class="primary" data-nombre="${pelicula.nombre}" data-descripcion="${pelicula.descripcion}" data-duracion="${pelicula.duracion}" data-genero="${pelicula.genero}" data-imagen="${pelicula.imagen}">Ver Más</button>
+                                <button class="primary" data-nombre="${pelicula.nombre}" data-descripcion="${pelicula.descripcion}" data-duracion="${pelicula.duracion}" data-genero="${pelicula.genero}" data-imagen="${pelicula.imagen}"  data-popularidad="${pelicula.popularidad}" >Ver Más</button>
                                 </div>
                             </div>
                         </div>
@@ -56,18 +56,20 @@ document.addEventListener("DOMContentLoaded", function() {
                     const duracion = this.getAttribute('data-duracion');
                     const genero = this.getAttribute('data-genero');
                     const imagen = this.getAttribute('data-imagen');
-                    showSerieDetails(nombre, descripcion, duracion, genero, imagen);
+                    const popularidad = this.getAttribute('data-popularidad');
+                    showSerieDetails(nombre, descripcion, duracion, genero, imagen, popularidad);
                 });
             });
 
             // Función para mostrar el modal con los detalles de la serie
-            function showSerieDetails(nombre, descripcion, duracion, genero, imagen) {
+            function showSerieDetails(nombre, descripcion, duracion, genero, imagen, popularidad) {
                 // Crea el modal dinámicamente
                 const modalHTML = `
                           <dialog class="modal-dialog">
                           <h2>${nombre}</h2>
                           <img src="${imagen}" alt="Imagen de la serie">
                           <div class="details">
+                          <h3>Calificacion: ${popularidad}</h3>
                           <h3>Duracion: ${duracion}</h3>
                           <h3>Genero: ${genero}</h3>
                           </div>
