@@ -393,25 +393,18 @@ h1 {
     right: -20px;
 }
 
-
-/* Media query para pantallas más pequeñas, como tabletas y teléfonos */
-
 @media (max-width: 768px) {
-    /* Ajusta el tamaño de fuente y el espaciado para una mejor legibilidad */
     body {
         font-size: 16px;
         line-height: 1.5;
     }
-    /* Ajusta el tamaño de fuente y margen en el encabezado */
     header h1 {
         font-size: 40px;
         margin-bottom: 10px;
     }
-    /* Estilos adicionales para el menú desplegable en el encabezado */
     header nav ul {
         position: absolute;
         top: 60px;
-        /* Ajusta la posición según sea necesario */
         left: 0;
         background: #000;
         width: 100%;
@@ -424,7 +417,6 @@ h1 {
     }
     header.sticky nav ul {
         top: 70px;
-        /* Ajusta la posición según sea necesario */
     }
     header.sticky .subscribe {
         display: none;
@@ -434,7 +426,6 @@ h1 {
 .time a {
     display: block;
     margin-bottom: 5px;
-    /* Espacio entre los enlaces "Acción" y "Ver detalles" */
 }
 
 #tendencias-carousel {
@@ -442,21 +433,16 @@ h1 {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     gap: 10px;
-    /* Reducir el espacio entre elementos */
     padding: 10px;
-    /* Reducir el espaciado interior para elementos */
     width: 100%;
 }
 
 .item {
     flex: 0 0 calc(25% - 10px);
-    /* Reducir el tamaño de los elementos */
     scroll-snap-align: start;
     border-radius: 8px;
-    /* Reducir el radio de los bordes */
     overflow: hidden;
     margin-right: 10px;
-    /* Espacio entre elementos */
 }
 
 .imgBox img {
@@ -466,49 +452,33 @@ h1 {
 
 .content .fa-play {
     font-size: 20px;
-    /* Reducir el tamaño del ícono de reproducción */
     padding: 8px;
-    /* Reducir el espaciado interior del botón */
 }
 
 .text h3 {
     font-size: 15px;
-    /* Aumentar el tamaño del título */
     margin: 10px 0;
-    /* Espaciado en la parte superior e inferior del título */
 }
-
-
-/* Estilo para los elementos de tiempo y género */
 
 .text .time {
     font-size: 13px;
-    /* Aumentar el tamaño del texto de tiempo y género */
 }
-
-
-/* Estilo para el enlace "detalles" */
 
 #populares-carousel {
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     gap: 10px;
-    /* Reducir el espacio entre elementos */
     padding: 10px;
-    /* Reducir el espaciado interior para elementos */
     width: 100%;
 }
 
 .item {
     flex: 0 0 calc(25% - 10px);
-    /* Reducir el tamaño de los elementos */
     scroll-snap-align: start;
     border-radius: 8px;
-    /* Reducir el radio de los bordes */
     overflow: hidden;
     margin-right: 10px;
-    /* Espacio entre elementos */
 }
 
 .imgBox img {
@@ -518,49 +488,33 @@ h1 {
 
 .content .fa-play {
     font-size: 20px;
-    /* Reducir el tamaño del ícono de reproducción */
     padding: 8px;
-    /* Reducir el espaciado interior del botón */
 }
 
 .text h3 {
     font-size: 15px;
-    /* Aumentar el tamaño del título */
     margin: 10px 0;
-    /* Espaciado en la parte superior e inferior del título */
 }
-
-
-/* Estilo para los elementos de tiempo y género */
 
 .text .time {
     font-size: 13px;
-    /* Aumentar el tamaño del texto de tiempo y género */
 }
-
-
-/* Estilo para el enlace "detalles" */
 
 #mejores-carousel {
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     gap: 10px;
-    /* Reducir el espacio entre elementos */
     padding: 10px;
-    /* Reducir el espaciado interior para elementos */
     width: 100%;
 }
 
 .item {
     flex: 0 0 calc(25% - 10px);
-    /* Reducir el tamaño de los elementos */
     scroll-snap-align: start;
     border-radius: 8px;
-    /* Reducir el radio de los bordes */
     overflow: hidden;
     margin-right: 10px;
-    /* Espacio entre elementos */
 }
 
 .imgBox img {
@@ -570,16 +524,12 @@ h1 {
 
 .content .fa-play {
     font-size: 20px;
-    /* Reducir el tamaño del ícono de reproducción */
     padding: 8px;
-    /* Reducir el espaciado interior del botón */
 }
 
 .text h3 {
     font-size: 15px;
-    /* Aumentar el tamaño del título */
     margin: 10px 0;
-    /* Espaciado en la parte superior e inferior del título */
 }
 
 
@@ -587,17 +537,6 @@ h1 {
 
 .text .time {
     font-size: 13px;
-    /* Aumentar el tamaño del texto de tiempo y género */
-}
-
-
-/* Estilo para el enlace "detalles" */
-
-.ver-detalles {
-    font-size: 16px;
-    /* Aumentar el tamaño del enlace "detalles" */
-    margin-left: 10px;
-    /* Espacio a la izquierda del enlace */
 }
 
 button.primary {
@@ -605,7 +544,6 @@ button.primary {
     font-size: 0.8rem;
     color: #ffffff !important;
     background: #2196F3;
-    /* Cambiado a azul */
     padding: 13px 25px;
     border-radius: 17px;
     transition: background-color 0.1s ease;
@@ -626,7 +564,7 @@ button.primary:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #9fa2a9;
+    background-color: #74707a;
     width: 1400px;
     max-width: 100%;
     max-height: 100%;
@@ -650,6 +588,17 @@ button.primary:hover {
     font-size: 15px;
 }
 
+
+/* Estilo para los detalles (título, duración, género, descripción) */
+
+.modal-dialog h2,
+.modal-dialog p {
+    margin: 10px 0;
+}
+
+
+/* Estilo para el botón de cierre */
+
 .modal-dialog .x {
     position: absolute;
     top: 10px;
@@ -666,7 +615,7 @@ button.primary:hover {
 .modal-dialog .descargar-button {
     display: inline-block;
     font-size: 0.8rem;
-    color: #ffffff;
+    color: #ffffff !important;
     background: #2196F3;
     padding: 13px 25px;
     border-radius: 17px;
@@ -681,10 +630,13 @@ button.primary:hover {
     transform: translateY(-5px);
 }
 
+
+/* Estilo para el botón "Ver Más" */
+
 .modal-dialog .ver-button {
     display: inline-block;
     font-size: 0.8rem;
-    color: #ffffff;
+    color: #ffffff !important;
     background: #2196F3;
     padding: 13px 25px;
     border-radius: 17px;

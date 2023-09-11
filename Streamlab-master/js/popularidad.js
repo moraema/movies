@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch('http://localhost:8080/populares')
         .then(response => response.json())
         .then(populares => {
-            // Procesa los datos de las series aquí
+
             console.log('Datos de series extraídos correctamente:', populares);
 
             // Obtén una referencia al contenedor del carrusel
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Variable para almacenar el HTML generado dinámicamente
             let dynamicHTML = '';
 
-            // Recorre el arreglo 'series' y genera elementos para cada serie
+
             populares.forEach(popular => {
                 dynamicHTML += `
                     <div class="item">
@@ -24,24 +24,22 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <i class="fas fa-share-alt"></i>
                                     <i class="fas fa-plus"></i>
                                 </div>
-                            </div>
-
-                            <div class="content">
+                               </div>
+                                <div class="content">
                                 <i id="palybtn" class="fas fa-play"></i>
-                            </div>
-                            <div class="text">
+                                </div>
+                                <div class="text">
                                 <h3>${popular.nombre} </h3>
                                 <div class="time flex">
                                     <span>${popular.duracion}</span>
                                     <i class="fas fa-circle"></i>
-                                    <a>${popular.genero}</a>
-                                    
+                                    <a>${popular.genero}</a>   
                                 </div>
                                 <button class="primary" data-nombre="${popular.nombre}" data-descripcion="${popular.descripcion}" data-duracion="${popular.duracion}" data-genero="${popular.genero}" data-imagen="${popular.imagen}">Ver Más</button>
-                            </div>
-                        </div>
-                    </div>
-                `;
+                                </div>
+                                </div>
+                              </div>
+                    `;
             });
 
             // Inserta el HTML generado dinámicamente en el marcador
@@ -63,20 +61,20 @@ document.addEventListener("DOMContentLoaded", function() {
             function showSerieDetails(nombre, descripcion, duracion, genero, imagen) {
                 // Crea el modal dinámicamente
                 const modalHTML = `
-                      <dialog class="modal-dialog">
-                      <h2>${nombre}</h2>
-                      <img src="${imagen}" alt="Imagen de la serie">
-                      <div class="details">
-                      <h3>${duracion}</h3>
-                      <h3>${genero}</h3>
-                      </div>
-                      <p>${descripcion}</p>
-                      <button class="ver-button">Ver</button>
-                      <button class="descargar-button">Descargar</button>
-                      <button aria-label="close" class="x">❌</button>
-                      </dialog>
-
-    `;
+                          <dialog class="modal-dialog">
+                          <h2>${nombre}</h2>
+                          <img src="${imagen}" alt="Imagen de la serie">
+                          <div class="details">
+                          <h3>Duracion: ${duracion}</h3>
+                          <h3>Genero: ${genero}</h3>
+                          </div>
+                          <p>${descripcion}</p>
+                          <button class="ver-button">Ver</button>
+                          <button class="descargar-button">Descargar</button>
+                          <button aria-label="close" class="x">❌</button>
+                          </dialog>
+    
+        `;
 
                 // Agrega el modal al final del cuerpo del documento
                 document.body.insertAdjacentHTML('beforeend', modalHTML);
@@ -88,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const modal = document.querySelector('.modal-dialog');
                 modal.showModal();
 
-                // Agrega un evento click al botón de cierre para cerrar el modal
+                // evento click al botón de cierre para cerrar el modal
                 closeButton.addEventListener('click', function() {
                     // Cierra el modal
                     modal.close();

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch('http://localhost:8080/reciente')
         .then(response => response.json())
         .then(recientes => {
-            // Procesa los datos de las series aquí
+
             console.log('Datos de series extraídos correctamente:', recientes);
 
             // Obtén una referencia al contenedor del carrusel
@@ -34,18 +34,16 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <div class="time flex">
                                     <span>${reciente.duracion}</span>
                                     <i class="fas fa-circle"></i>
-                                    <a>${reciente.genero}</a>
-                                    
+                                    <a>${reciente.genero}</a>        
                                 </div>
-                                <button class="primary" data-nombre="${reciente.nombre}" data-descripcion="${reciente.descripcion}" data-duracion="${reciente.duracion}" data-genero="${reciente.genero}" data-imagen="${reciente.imagen}">Ver Más</button>
+                                </div>
+
                             </div>
                         </div>
-                    </div>
-                `;
+                    `;
             });
 
-            // Inserta el HTML generado dinámicamente en el marcador
-            recientesCarousel.insertAdjacentHTML('beforeend', dynamicHTML);
+
             const verMasBotones = document.querySelectorAll('.text button.primary');
             verMasBotones.forEach(boton => {
                 boton.addEventListener('click', function() {
@@ -62,32 +60,32 @@ document.addEventListener("DOMContentLoaded", function() {
             function showSerieDetails(nombre, descripcion, duracion, genero, imagen) {
                 // Crea el modal dinámicamente
                 const modalHTML = `
-                      <dialog class="modal-dialog">
-                      <h2>${nombre}</h2>
-                      <img src="${imagen}" alt="Imagen de la serie">
-                      <div class="details">
-                      <h3>${duracion}</h3>
-                      <h3>${genero}</h3>
-                      </div>
-                      <p>${descripcion}</p>
-                      <button class="ver-button">Ver</button>
-                      <button class="descargar-button">Descargar</button>
-                      <button aria-label="close" class="x">❌</button>
-                      </dialog>
-
-    `;
+                          <dialog class="modal-dialog">
+                          <h2>${nombre}</h2>
+                          <img src="${imagen}" alt="Imagen de la serie">
+                          <div class="details">
+                          <h3>Duracion: ${duracion}</h3>
+                          <h3>Genero: ${genero}</h3>
+                          </div>
+                          <p>${descripcion}</p>
+                          <button class="ver-button">Ver</button>
+                          <button class="descargar-button">Descargar</button>
+                          <button aria-label="close" class="x">❌</button>
+                          </dialog>
+    
+        `;
 
                 // Agrega el modal al final del cuerpo del documento
                 document.body.insertAdjacentHTML('beforeend', modalHTML);
 
-                // Obtén una referencia al botón de cierre del modal recién creado
+                //referencia al botón de cierre del modal recién creado
                 const closeButton = document.querySelector('.modal-dialog button.x');
 
                 // Muestra el modal
                 const modal = document.querySelector('.modal-dialog');
                 modal.showModal();
 
-                // Agrega un evento click al botón de cierre para cerrar el modal
+                //  evento click al botón de cierre para cerrar el modal
                 closeButton.addEventListener('click', function() {
                     // Cierra el modal
                     modal.close();

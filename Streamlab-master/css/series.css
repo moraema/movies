@@ -407,12 +407,43 @@ h1 {
     font-size: 13px;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+
+/* Estilo para el contenido del modal */
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 70%;
+    box-shadow: 0px 0px 10px 0px #000;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
 button.primary {
     display: inline-block;
     font-size: 0.8rem;
     color: #ffffff !important;
     background: #2196F3;
-    /* Cambiado a azul */
     padding: 13px 25px;
     border-radius: 17px;
     transition: background-color 0.1s ease;
@@ -433,7 +464,7 @@ button.primary:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #9fa2a9;
+    background-color: #74707a;
     width: 1400px;
     max-width: 100%;
     max-height: 100%;
@@ -457,6 +488,17 @@ button.primary:hover {
     font-size: 15px;
 }
 
+
+/* Estilo para los detalles (título, duración, género, descripción) */
+
+.modal-dialog h2,
+.modal-dialog p {
+    margin: 10px 0;
+}
+
+
+/* Estilo para el botón de cierre */
+
 .modal-dialog .x {
     position: absolute;
     top: 10px;
@@ -473,7 +515,7 @@ button.primary:hover {
 .modal-dialog .descargar-button {
     display: inline-block;
     font-size: 0.8rem;
-    color: #ffffff;
+    color: #ffffff !important;
     background: #2196F3;
     padding: 13px 25px;
     border-radius: 17px;
@@ -488,10 +530,13 @@ button.primary:hover {
     transform: translateY(-5px);
 }
 
+
+/* Estilo para el botón "Ver Más" */
+
 .modal-dialog .ver-button {
     display: inline-block;
     font-size: 0.8rem;
-    color: #ffffff;
+    color: #ffffff !important;
     background: #2196F3;
     padding: 13px 25px;
     border-radius: 17px;

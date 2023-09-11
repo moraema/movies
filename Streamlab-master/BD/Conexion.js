@@ -28,7 +28,7 @@ db.connect((error) => {
     }
 });
 
-app.use(express.json()); // Middleware para procesar JSON en las solicitudes
+app.use(express.json());
 
 app.on('error', (err) => {
     console.error('Ocurrió un error en el servidor:', err);
@@ -44,12 +44,13 @@ app.get('/pelicula', (req, res) => {
             console.error('Error al obtener los datos de las series:', error);
             res.status(500).json({ error: 'Error al obtener los datos de las series' });
         } else {
-            // Crear un arreglo para almacenar las series
+
+
             const peliculas = [];
 
-            // Iterar a través de los resultados de la consulta
+
             results.forEach((pelicula) => {
-                // Crear un objeto para cada serie con las características deseadas
+
                 const peliculaInfo = {
                     id: pelicula.id,
                     nombre: pelicula.nombre,
@@ -60,13 +61,12 @@ app.get('/pelicula', (req, res) => {
                     duracion: pelicula.duracion
                 };
 
-                // Agregar el objeto de la serie al arreglo
                 peliculas.push(peliculaInfo);
             });
 
             console.log('Datos de la tabla', peliculas);
 
-            // Enviar el arreglo de series como respuesta
+
             res.json(peliculas);
         }
     });
@@ -84,12 +84,12 @@ app.get('/serie', (req, res) => {
             console.error('Error al obtener los datos de las series:', error);
             res.status(500).json({ error: 'Error al obtener los datos de las series' });
         } else {
-            // Crear un arreglo para almacenar las series
+
             const series = [];
 
-            // Iterar a través de los resultados de la consulta
+
             results.forEach((serie) => {
-                // Crear un objeto para cada serie con las características deseadas
+
                 const serieInfo = {
                     id: serie.id,
                     nombre: serie.nombre,
@@ -100,19 +100,19 @@ app.get('/serie', (req, res) => {
                     duracion: serie.duracion
                 };
 
-                // Agregar el objeto de la serie al arreglo
+
                 series.push(serieInfo);
             });
 
             console.log('Datos de la tabla', series);
 
-            // Enviar el arreglo de series como respuesta
+
             res.json(series);
         }
     });
 });
 
-// Ruta para obtener las películas recientes desde el array
+//  obtener las películas 
 
 app.get('/reciente', (req, res) => {
 
@@ -123,12 +123,11 @@ app.get('/reciente', (req, res) => {
             console.error('Error al obtener los datos de las series:', error);
             res.status(500).json({ error: 'Error al obtener los datos de las series' });
         } else {
-            // Crear un arreglo para almacenar las series
+
             const recientes = [];
 
-            // Iterar a través de los resultados de la consulta
             results.forEach((reciente) => {
-                // Crear un objeto para cada serie con las características deseadas
+
                 const recienteInfo = {
                     id: reciente.id,
                     nombre: reciente.nombre,
@@ -139,18 +138,19 @@ app.get('/reciente', (req, res) => {
                     duracion: reciente.duracion
                 };
 
-                // Agregar el objeto de la serie al arreglo
+
                 recientes.push(recienteInfo);
             });
 
             console.log('Datos de la tabla', recientes);
 
-            // Enviar el arreglo de series como respuesta
+
             res.json(recientes);
         }
     });
 });
 
+//opterner la mejores peliculas
 
 app.get('/mejores', (req, res) => {
 
@@ -161,12 +161,12 @@ app.get('/mejores', (req, res) => {
             console.error('Error al obtener los datos de las series:', error);
             res.status(500).json({ error: 'Error al obtener los datos de las series' });
         } else {
-            // Crear un arreglo para almacenar las series
+
             const mejores = [];
 
-            // Iterar a través de los resultados de la consulta
+
             results.forEach((mejor) => {
-                // Crear un objeto para cada serie con las características deseadas
+
                 const mejorInfo = {
                     id: mejor.id,
                     nombre: mejor.nombre,
@@ -177,17 +177,19 @@ app.get('/mejores', (req, res) => {
                     duracion: mejor.duracion
                 };
 
-                // Agregar el objeto de la serie al arreglo
+
                 mejores.push(mejorInfo);
             });
 
             console.log('Datos de la tabla', mejores);
 
-            // Enviar el arreglo de series como respuesta
+
             res.json(mejores);
         }
     });
 });
+
+// optener las peliculas en tendencia
 
 app.get('/tendencias', (req, res) => {
 
@@ -198,12 +200,12 @@ app.get('/tendencias', (req, res) => {
             console.error('Error al obtener los datos de las series:', error);
             res.status(500).json({ error: 'Error al obtener los datos de las series' });
         } else {
-            // Crear un arreglo para almacenar las series
+
             const tendencias = [];
 
-            // Iterar a través de los resultados de la consulta
+
             results.forEach((tendencia) => {
-                // Crear un objeto para cada serie con las características deseadas
+
                 const tendenciaInfo = {
                     id: tendencia.id,
                     nombre: tendencia.nombre,
@@ -214,17 +216,19 @@ app.get('/tendencias', (req, res) => {
                     duracion: tendencia.duracion
                 };
 
-                // Agregar el objeto de la serie al arreglo
+
                 tendencias.push(tendenciaInfo);
             });
 
             console.log('Datos de la tabla', tendencias);
 
-            // Enviar el arreglo de series como respuesta
+
             res.json(tendencias);
         }
     });
 });
+
+// optener las peliculas mas populares
 
 app.get('/populares', (req, res) => {
     const query = 'SELECT * FROM mejores UNION SELECT * FROM tendencia';
@@ -234,12 +238,12 @@ app.get('/populares', (req, res) => {
             console.error('Error al obtener los datos de mejores y tendencia:', error);
             res.status(500).json({ error: 'Error al obtener los datos de mejores y tendencia' });
         } else {
-            // Crear un arreglo para almacenar los datos de populares
+
             const populares = [];
 
-            // Iterar a través de los resultados de la consulta
+
             results.forEach((popular) => {
-                // Crear un objeto para cada elemento con las características deseadas
+
                 const popularInfo = {
                     id: popular.id,
                     nombre: popular.nombre,
@@ -250,16 +254,15 @@ app.get('/populares', (req, res) => {
                     duracion: popular.duracion
                 };
 
-                // Agregar el objeto al arreglo de populares
+
                 populares.push(popularInfo);
             });
 
-            // Ordenar el arreglo de populares por popularidad (en orden descendente)
+
             populares.sort((a, b) => b.popularidad - a.popularidad);
 
             console.log('Datos populares ordenados por popularidad:', populares);
 
-            // Enviar el arreglo de elementos populares como respuesta
             res.json(populares);
         }
     });
@@ -272,8 +275,7 @@ const server = app.listen(port, () => {
     console.log(`Servidor iniciado en el puerto ${port}`);
 });
 
-// Manejo de errores no capturados en las promesas
+// Manejo de errores
 process.on('unhandledRejection', (reason, promise) => {
     console.error('Unhandled Rejection at:', promise, 'reason:', reason);
-    // Aquí puedes agregar código adicional para manejar el error de manera adecuada
 });

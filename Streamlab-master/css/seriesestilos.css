@@ -1,7 +1,4 @@
-/* Estilos para el carrusel principal */
-
 #series-carousel.owl-carousel {
-    /* Estilos para el contenedor principal del carrusel */
     background-color: #f0f0f0;
     padding: 20px;
 }
@@ -10,33 +7,22 @@
 /* Estilos para los elementos del carrusel */
 
 #series-carousel.owl-carousel .owl-item {
-    /* Estilos para cada elemento del carrusel */
     margin: 0 10px;
-    /* Espacio entre elementos */
 }
-
-
-/* Estilos para las flechas de navegación del carrusel */
 
 #series-carousel.owl-carousel .owl-prev,
 #series-carousel.owl-carousel .owl-next {
-    /* Estilos para las flechas de navegación */
     background-color: #333;
     color: #fff;
     font-size: 24px;
     padding: 10px;
 }
 
-
-/* Estilos para los puntos de navegación (indicadores) del carrusel */
-
 #series-carousel.owl-carousel .owl-dots {
-    /* Estilos para los puntos de navegación */
     text-align: center;
 }
 
 #series-carousel.owl-carousel .owl-dot {
-    /* Estilos para cada punto de navegación */
     background-color: #333;
     border: 2px solid #fff;
     border-radius: 50%;
