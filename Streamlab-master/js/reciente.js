@@ -34,14 +34,19 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <div class="time flex">
                                     <span>${reciente.duracion}</span>
                                     <i class="fas fa-circle"></i>
-                                    <a>${reciente.genero}</a>        
+                                    <a>${reciente.genero}</a>
+                                    
                                 </div>
+                                <button class="primary" data-nombre="${reciente.nombre}" data-descripcion="${reciente.descripcion}" data-duracion="${reciente.duracion}" data-genero="${reciente.genero}" data-imagen="${reciente.imagen}">Ver Más</button>
+                                
                                 </div>
-
                             </div>
                         </div>
                     `;
             });
+
+            // Inserta el HTML generado dinámicamente en el marcador
+            recientesCarousel.insertAdjacentHTML('beforeend', dynamicHTML);
 
 
             const verMasBotones = document.querySelectorAll('.text button.primary');

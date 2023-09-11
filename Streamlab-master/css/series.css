@@ -10,6 +10,9 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+
+/*---------global------*/
+
 .container {
     max-width: 95%;
     margin: auto;
@@ -42,6 +45,12 @@ i {
     cursor: pointer;
     transition: 0.5s;
 }
+
+
+/*---------global------*/
+
+
+/*---------header------*/
 
 .home {
     color: white;
@@ -183,6 +192,9 @@ header.sticky .subscribe {
     }
 }
 
+
+/*---------home_content------*/
+
 .left,
 .right {
     width: 50%;
@@ -252,6 +264,12 @@ h1 {
     font-size: 18px;
 }
 
+
+/*---------header------*/
+
+
+/*---------popular------*/
+
 .heading h2 {
     font-size: 25px;
     font-weight: 400;
@@ -269,6 +287,9 @@ h1 {
 .popular {
     color: white;
 }
+
+
+/*---------image_hover------*/
 
 .popular .box {
     position: relative;
@@ -319,6 +340,9 @@ h1 {
     line-height: 60px;
 }
 
+
+/*----icon------*/
+
 .popular .icon {
     position: absolute;
     bottom: 0;
@@ -329,6 +353,9 @@ h1 {
     font-size: 20px;
     margin: 10px;
 }
+
+
+/*----text------*/
 
 .popular .text {
     padding: 20px;
@@ -371,6 +398,9 @@ h1 {
     margin-bottom: 5px;
 }
 
+
+/* Contenedor principal del carrusel */
+
 #series-carousel {
     display: flex;
     overflow-x: scroll;
@@ -406,6 +436,9 @@ h1 {
 .text .time {
     font-size: 13px;
 }
+
+
+/* Estilo para el modal */
 
 .modal {
     display: none;
@@ -476,16 +509,14 @@ button.primary:hover {
     box-sizing: border-box;
 }
 
+
+/* Estilo para la imagen */
+
 .modal-dialog img {
     display: block;
     margin: 0 auto;
     max-width: 50%;
     height: auto;
-}
-
-.modal-dialog p {
-    margin: 10px 0;
-    font-size: 15px;
 }
 
 
@@ -511,6 +542,9 @@ button.primary:hover {
     border: none;
     padding: 8px;
 }
+
+
+/* Estilo para el botón "Descargar" */
 
 .modal-dialog .descargar-button {
     display: inline-block;
